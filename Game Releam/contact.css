@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-fix-back{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #000053;
+}
+.contact-fix-back img{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    opacity: 1;
+}
+
+.contact-body{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 60px;
+    color: white;
+    animation: fadeIn 0.8s ease-in-out;
+}
+.contact-container{
+    width: 44%;
+    animation: fadeIn 1.4s ease-in-out;
+}
+.form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* width: 40%; */
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 4px solid #8585fc;
+
+}
+.form-box > h1{
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 20px 0px 0px 0px;
+    padding-bottom: 2px;
+    border-bottom: 4.4px solid #8585fc;
+    color: #dfdfff;
+}
+.form-box form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* align-items: center; */
+    width: 100%;
+    padding: 20px 36px;
+    animation: fadeIn 2.6s ease-in-out;
+
+}
+
+.label-box{
+    font-size: 1.08em;
+    color: #c5c5ff;    
+    width: fit-content;
+}
+
+.input-box{
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0px;
+}
+
+.input-box:focus{
+    outline: none;
+    outline: 3px solid #8585fc;
+}
+
+form > textarea{
+    height: 150px;
+}
+
+form > button{
+    padding: 12px 20px;
+    /* width: fit-content; */
+    border-radius: 8px;
+    margin: 10px 0px;
+    background-color: transparent;
+    color: white;
+    backdrop-filter: blur(6px);
+    
+    box-shadow: 1px 1px 2px 2px #8585fc;
+}
+
+form > button:hover{
+    background: linear-gradient(220deg, #00103f94 0%, #0040ff8f 73%);
+    transition: 0.3s;
+    box-shadow: 2px 2px 2px 1px #000000;
+}
+
+form > button:active{
+    background-color: #1a1aca;
+}
+
+@media (max-width:1260px){
+    .contact-fix-back{
+        background-position: left;
+        width: 1300px;
+        height: 100%;
+    }
+}
+@media (max-width:980px){
+    .contact-container{
+        width: 70%;
+    }
+    .contact-body{
+        padding: 30px;
+    }
+}
+@media (max-width:720px){
+    .contact-container{
+        width: 100%;
+    }
+    .contact-body{
+        padding: 20px;
+    }
+}

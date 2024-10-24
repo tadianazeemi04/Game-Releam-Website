@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.scroll-animator {
+    height: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    background-color: #0241ff;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-animation linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-animation {
+    to {
+        scale: 1 1;
+    }
+}
+
+.images {
+    display: block;
+    width: 100%;
+    height: 704px;
+    background-color: black;
+    border-bottom: 4px solid #053ce0;
+}
+
+.background-slideshow {
+    /* z-index: 1; */
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    /* display: block; */
+    top: 74px;
+    left: 0;
+    overflow: hidden;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.bg-image {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    height: 700px;
+    background-size: cover;
+    /* background-position: center center; */
+    opacity: 0;
+    animation: fade 14s infinite;
+}
+
+.image1 {
+    background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202111/0907/nnsJwx47UkQyMSqOHIkBCQIm.jpg');
+    animation-delay: 0s;
+}
+
+.image2 {
+    background-image: url('https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230410/ss_b06620c448c51d2bc5b71144a184da9ba37b703e.1920x1080.jpg?t=1718729473');
+    animation-delay: 5s;
+}
+
+.image3 {
+    background-image: url('https://assets.xboxservices.com/assets/1d/8f/1d8f5d61-2a8c-4377-a512-88b060deeaf4.jpg?n=FH4_GLP-Page-Hero-1084_1920x1080_02.jpg');
+    animation-delay: 10s;
+}
+
+.image4 {
+    background-image: url('https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s1-2560x1440-eca6506e95a1_2560x1440-193582a5fd76a593804e0171d6395cf4');
+    animation-delay: 15s;
+}
+
+.image5 {
+    background-image: url('https://media.vandal.net/m/9-2023/25/202392582324_1.jpg');
+    animation-delay: 20s;
+}
+
+.image6 {
+    background-image: url('https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/09/assassins-creed-1.jpg');
+    animation-delay: 25s;
+}
+
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    30%,
+    70% {
+        opacity: 1;
+    }
+}
+
+.landing-info {
+    /* z-index: 10; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    padding: 10%;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    /* display: block; */
+    top: 74px;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 0.44); */
+    background: rgb(255, 255, 255);
+    /* background: linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 11, 39, 0.8) 73%); */
+    background: linear-gradient(270deg, rgba(12, 12, 12, 0.6) 0%, rgba(0, 0, 0, 0.86) 73%);
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.landing-info h1 {
+    font-size: 3.6rem;
+    margin-top: 130px;
+    letter-spacing: 1px;
+    animation: slideIn 1.8s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.landing-info h1 span {
+    color: #9dcefc;
+    filter: drop-shadow(0px 0px 2px 4px #e4f2ff);
+}
+
+/* .landing-info h1 .releam{
+    color: #4d4aff;
+} */
+
+.landing-info p {
+    font-size: 1.34rem;
+    margin: 20px 600px 20px 0px;
+    text-align: left;
+    line-height: 1.4;
+    opacity: 0;
+    animation: fadeInUp 2s forwards 1s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.landing-info .landing-btn {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    color: #d6e9ff;
+    padding: 12px 28px;
+    min-width: 153px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: none;
+    background: #0077ff;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInUp 2s forwards 1.5s;
+}
+
+.landing-btn:hover {
+    background: #72b2fc;
+    color: #001936;
+    transition: 0.3s;
+}
+
+.landing-btn:active {
+    background: #2a75ca;
+    color: #001936;
+}
+
+.exp-info {
+    position: sticky;
+    /* background-color: white; */
+    margin: 60px 60px 0px 60px;
+    padding-bottom: 1px;
+    background-color: #dfeeff;
+    background-image:
+        repeating-linear-gradient(to right, transparent 0 100px,
+            #25283b22 100px 101px),
+        repeating-linear-gradient(to bottom, transparent 0 100px,
+            #25283b22 100px 101px);
+    /* height: 800px; */
+}
+
+.exp-bg {
+    background-image: url(img/bg@4x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* height: 616px; */
+}
+.exp-content{
+    padding: 60px 60px 0px 60px;
+}
+.exp-heading {
+    display: flex;
+    z-index: 10;
+}
+
+.exp-heading h1 {
+    color: #022692;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.exp-heading span {
+    animation: fade 1.4s infinite ease-in-out;
+    /* background-color: #e01102; */
+}
+.exp-items{
+    /* display: flex; */
+    justify-content: space-between;
+    
+}
+
+.item{
+    /* width: 650px; */
+    /* height: 360px; */
+    margin: 80px 30px;
+    /* background-color: #ffffff; */
+    padding: 10px;
+    display: flex;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s, transform 1.6s;
+    /* animation: fadeInUp 2s forwards 1s; */
+}
+
+.item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.item video{
+    width: 600px;
+    background-color: black;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 1px 4px #001936;
+}
+
+.item-info h3{
+    background-color: #0241ff;
+    background: linear-gradient(220deg, #5378e6 0%, #0332c0 73%);
+
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 16px;
+    transform: skewX(-16deg);
+    position: relative;
+    right: 58px;
+    bottom: 30px;
+    box-shadow: #022692;
+}
+.item-discription{
+    background-color: transparent;
+    background: linear-gradient(220deg, rgba(83, 120, 230, 0.329) 0%, rgba(3, 50, 192, 0.377) 73%);
+    margin: -24px 20px 0px 20px;
+    /* background-size: 10px 10px; */
+    /* transform: skewX(-4deg); */
+    /* backdrop-filter: blur(16px); */
+    border-radius: 20px;
+}
+.item-info p{
+    /* border:4px solid #001936; */
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 16px;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 1.2rem;
+    /* color: white; */
+}
+.item-info button{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0px 20px 50px 20px;
+    background-color: #001936;
+}
+.item-info button:hover{
+    background-color: #0077ff;
+    color: white;
+    /* font-weight: 700; */
+    /* font-size: 1.2rem; */
+    box-shadow:4px 4px #001936;
+    transform: 0.3s;
+}
+
+.item-2 .item-info h3{
+    right: 0;
+    left: 314px;
+}
+
+.item-4 .item-info h3{
+    left: 194px;
+    right: 0px;
+}
+
+.suggestion-box {
+    /* background-color: #000000; */
+    background-image: url(https://p325k7wa.twic.pics/high/tekken/tekken-7/00-page-setup/t7_background.jpg?twic=v1/cover-min=1350x427);
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggestion-box h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    margin: 38px auto;
+}
+
+.suggestion-box > a {
+    margin: 38px;
+}
+
+.sugest-games-list {
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    padding-top: 14px;
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.sugest-games-list .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+.sugest-games-list .sugest-games {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1))!important;
+}
+
+.sugest-games a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 16px;
+    background: linear-gradient(220deg, rgba(255, 255, 255, 0.44) 0%, rgba(0, 0, 0, 0.78) 73%);
+    backdrop-filter: blur(12px);
+    /* border: 4px solid #0077ff; */
+}
+
+.sugest-games a h3{
+    padding-top: 12px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 24px;
+    margin: 0px;
+}
+
+.sugest-img{
+    width: 100%;
+    height: 280px;
+    border-radius: 26px;
+    object-fit: cover;
+    align-items: center;
+    background-color: black;
+}
+
+.sugest-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+.sugest-games-list:hover .sugest-games {
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+
+.sugest-games-list .sugest-games:hover {
+    filter: grayscale(0);
+}
+
+.sugest-games-list[reverse="true"] .sugest-games {
+    animation: reversePlay 10s linear infinite;
+}
+
+@keyframes reversePlay {
+    from {
+        left: calc(var(--width) * -1);
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.see-all button{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgb(231, 0, 0);
+}
+
+.see-all button:hover{
+    background-color: transparent;
+    border: 2px solid red;
+    color: red;
+}
+.see-all button:active{
+    background-color: rgba(255, 95, 95, 0.404);
+    color: rgb(255, 186, 186);
+}
+
+.latest-update{
+    background: url(https://p325k7wa.twic.pics/high/that-time-i-got-reincarnated-as-a-slime-isekai-chronicles/that-time-i-got-reincarnated-as-a-slime-isekai-chronicles/00-page-setup/TTIGRSIC-header-desktop.jpg?twic=v1/cover-min=1340x454);
+    width: 100%;
+    background-position: center center;
+    margin: 0px 0px;
+    /* background-color: #006cdf; */
+    color: white;
+    /* text-align: center; */
+    /* margin: 20px auto; */
+    /* border-radius: 10px; */
+    /* width: 80%; */
+    /* max-width: 600px; */
+}
+
+.gradient-bg{
+    padding: 200px 0px 200px 140px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 93%);
+
+}
+
+.latest-update h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.latest-update p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.subscription-form {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.subscription-form input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 4px solid #000d1a;
+    border-right: none;
+    /* border-radius: 5px; */
+    /* margin-bottom: 20px; */
+    width: 80%;
+    max-width: 400px;
+}
+
+.subscription-form input[type="email"]:focus{
+    outline: none;
+}
+
+.subscription-form button {
+    background-color: #000d1a;
+    color: #469fff;
+    border: 4px solid #000d1a;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    /* border: none; */
+    /* border-radius: 5px; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscription-form button:hover {
+    background-color: #005bb5;
+    color: #ffffff;
+    border: 4px solid #005bb5;
+}
+
+.subscription-form button:active {
+    background-color: rgba(68, 110, 153, 0.8);
+    color: #ffffff;
+    border: 4px solid #005bb5;
+}
+
+#confirmation-message a{
+    text-decoration: none;
+    color: #022692;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #a8d1ff;
+}
+#confirmation-message a:hover{
+    background-color: #0077ff;
+    color: white;
+    box-shadow:4px 4px #001936;
+    transform: 0.3s;
+}
+
+@media (max-width:1360px) {
+    .landing-info p{
+        margin: 20px 330px 20px 0px;
+    }
+}
+
+@media (max-width:1300px) {
+    .item{
+        margin: 40px 20px;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 4px solid #0077ff;
+    }
+    .item video{
+        margin-bottom: 20px;
+    }
+    .item video{
+        width: 100%;
+    }
+    .item-info h3{
+        position: static;
+        margin: 20px;
+    }
+    .item-info p{
+        margin: 16px auto;
+    }
+    
+}
+
+@media (max-width:1000px) {
+    .landing-info h1{
+        font-size: 2.6rem;
+    }
+    .landing-info p{
+        margin: 20px 60px 20px 0px;
+    }
+    .gradient-bg {
+        padding: 100px;
+    }
+}
+@media (max-width:900px) {
+    .exp-info{
+        margin: 0;
+    }
+    .exp-content {
+        padding: 44px 44px 0px 44px;
+    }
+    .item video{
+        width: 100%;
+    }
+    .item-info h3{
+        margin: 16px 0px;
+    }
+    .item-discription{
+        margin: 0px;
+    }
+}

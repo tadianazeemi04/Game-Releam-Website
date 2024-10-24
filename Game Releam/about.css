@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-fix-back{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.controller-img{
+    position: absolute;
+    right: -90px;
+    top: -40px;
+    transform: rotateX(20deg) rotateY(30deg) rotateZ(0deg);
+    animation: controler-animate 6s infinite;
+    overflow: hidden;
+}
+
+@keyframes controler-animate {
+    0%{
+    transform: rotateX(20deg) rotateY(30deg) rotateZ(0deg);
+    overflow: hidden;
+
+    }
+    50%{
+    transform: rotateX(-20deg) rotateY(-30deg) rotateZ(10deg);
+    overflow: hidden;
+
+    }
+    100%{
+    transform: rotateX(20deg) rotateY(30deg) rotateZ(0deg);
+    overflow: hidden;
+
+    }
+    
+}
+
+.about-bg{
+    margin: 80px 100px 0px 100px;
+    background-color: transparent;
+    background-image: linear-gradient(45deg, rgba(53, 101, 141, 0.6), rgba(0, 95, 190, 0.4));
+    backdrop-filter: blur(6px);
+    border-radius: 24px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top: 4px solid #ffffff;
+    border-left: 4px solid #ffffff;
+    border-right:4px solid  #ffffff;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.about-info {
+    padding: 30px 40px;
+    /* margin: 30px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2.8s ease-in-out;
+}
+
+.about-info h1, .about-info h2, .about-info h3, .about-info h4 {
+    color: #9bc3ff;
+    font-weight: bold;
+}
+
+.about-info p, .about-info ul {
+    color: #ffffff;
+    font-size: 1.12rem;
+}
+
+.about-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.go-to-games button{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #0004ee;
+}
+
+.go-to-games button:hover{
+    background-color: #02264d;
+    border: 2px solid #02264d;
+    color: #ffffff;
+}
+.go-to-games button:active{
+    background-color: #010375;
+    color: #002fff;
+}
+
+@media (max-width:1150px){
+    .about-fix-back{
+        background-position: left;
+        width: 1200px;
+        height: 100%;
+    }
+}
+
+@media (max-width:900px){
+    .about-bg{
+        margin: 40px 30px 0px 30px;
+    }
+    .controller-img{
+        overflow-x: hidden;
+    }
+}

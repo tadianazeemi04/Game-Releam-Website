@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    --scroll-size: 8px;
+    --scroll-radius: 20px;
+    --scroll-track: #031930;
+    --scroll-thumb-color: #053ce0;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: var(--scroll-size);
+    height: var(--scroll-size);
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--scroll-thumb-color); 
+    background: var(--scroll-track);
+    border-radius: var(--scroll-radius);
+}
+
+::-webkit-scrollbar-thumb { 
+    background: var(--scroll-thumb-color);
+    border-radius: var(--scroll-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken(var(--scroll-thumb-color), 10%);
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb-color) var(--scroll-track);
+}
+
+.index-bg {
+    /* background-color: transparent; */
+    /* backdrop-filter: blur(20px); */
+    /* background-image: linear-gradient( 120deg, #131313, #d4d4d4); */
+    background-image: url(https://p325k7wa.twic.pics/high/tekken/tekken-7/00-page-setup/NEW/t7_background_desktop.jpg?twic=v1/cover-min=1340x367);
+    /* background-size: 1000px; */
+    /* z-index: -10; */
+    /* position: fixed; */
+    background-position: center;
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+header {
+    z-index: 20000;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-image: linear-gradient(120deg, #00102a, #0d57a3);
+    /* background-size: 10px 10px; */
+    color: white;
+    padding: 14px 0;
+    border-bottom: 4px solid #053ce0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    border-radius: 5px;
+    background-color: #0241ff;
+    filter: drop-shadow(0px 0px 4px #000f2e);
+    transition: 0.2s;
+}
+header nav ul li a:active {
+    background: #4d93e4;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 0px 4px #000f2e);
+}
+
+.auth-buttons span{
+    font-size: 26px;
+    margin-right: 10px;
+    /* padding: -8px 0px; */
+}
+.button > h6{
+    margin: 0;
+}
+.auth-buttons .button {
+    background-color: #007BFF;
+    color: white;
+    padding: 2px 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 10px; */
+    transition: background-color 0.3s;
+}
+
+.auth-buttons .button {
+    border-radius: 26px;
+    
+    background-color: #0179FF;
+}
+
+.auth-buttons .button:hover {
+    background-color: #0e4e92;
+}
+
+.auth-buttons .button:active {
+    background-color: #758AA5;
+}
+.auth-buttons .button:focus {
+    background-color: #002555;
+}
+
+.menu{
+    display: none;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 6px solid #000f2e;
+    padding: 16px 16px 0px 16px;
+    background-image: url(Assest/footer\ bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.social-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.icons a {
+    width: 60px;
+    height: 60px;
+    background-color: #0179FF;
+    /* background-color: #3fcaff; */
+    border-radius: 80%;
+    display: flex;
+    border: 3px solid #00153d;
+    filter: drop-shadow(0px 0px 6px #021a35);
+    align-items: center;
+    justify-content: center;
+    margin: 16px 36px;
+}
+
+.icons a:hover {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: #aed4ff;
+    transition: 0.2s ease-in-out;
+}
+.icons a:active {
+    background: #4d93e4;
+}
+
+.icons img {
+    /* width: 40px; */
+    height: 30px;
+}
+
+.html-pages {
+    padding: 20px 50px 40px 50px;
+}
+
+.html-pages ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.html-pages ul a {
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 50px;
+    font-size: 1.2rem;
+}
+
+.html-pages ul a:hover {
+    background-color: #0241ff;
+    border-radius: 20px;
+    transition: 0.2s ease-in;
+}
+.html-pages ul a:active {
+    background: #2a75ca;
+}
+
+.copywrite {
+    background-color: #00102a;
+    color: #4ea3ff;
+    padding: 14px;
+    text-align: center;
+}
+
+@media (max-width:1000px){
+    header .logo img {
+        height: 30px;
+    }
+    .menu{
+        display: inline-block;
+        width: 50px;
+        height: 40px;
+        background-color: #0077ff;
+        padding: 10px;
+        border-radius: 4px;
+    }
+    .menu:hover{
+        background-color: #2f52bb;
+        box-shadow: 0 0 2px 2px;
+        transition: 0.3s;
+    }
+    .menu:active{
+        background-color: #6283e4;
+        box-shadow: 0 0 2px 2px;
+        transition: 0.3s;
+    }
+    nav{
+        display:none ;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        position: absolute;
+        width: 200%;
+        /* display: none; */
+        li{
+            display: block;
+            width: 100%;
+            padding: 16px;
+        }
+    }
+
+
+
+    .auth-buttons{
+        display: none;
+    }
+    footer{
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+    .social-footer {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .html-pages ul{
+        flex-direction: column;
+    }
+    .html-pages ul li{
+        margin: 16px;
+    }
+}
